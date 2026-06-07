@@ -1,4 +1,4 @@
-# Kealvi Pulse
+# Kealvi
 
 A live polling workspace built with Next.js 16, React 19, and Supabase.
 

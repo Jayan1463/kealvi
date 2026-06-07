@@ -145,7 +145,7 @@ export default function PollsDashboard({ initialData }: { initialData: Workspace
         <header className="topbar">
           <div>
             <p className="eyebrow">Live audience workspace</p>
-            <h1>Kealvi Pulse</h1>
+            <h1>Kealvi</h1>
           </div>
           <div className="topbar-actions">
             <label className="identity-field">
