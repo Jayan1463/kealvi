@@ -167,7 +167,7 @@ function normalizePoll(row: PollRow, voterId?: string): Poll {
     }),
   };
 }
-
+//new func
 function buildWorkspace(rows: PollRow[], voterId?: string): WorkspaceData {
   const polls = rows.map((row) => normalizePoll(row, voterId));
   const people = new Set<string>();
