@@ -6,7 +6,7 @@ export type PollOption = {
   votes: number;
   percentage: number;
 };
-
+//sd
 export type Poll = {
   id: string;
   title: string;
