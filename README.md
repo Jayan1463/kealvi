@@ -21,3 +21,5 @@ A live polling workspace built with Next.js 16, React 19, and Supabase.
 
 The browser only calls Next.js Route Handlers. Direct public table access remains
 blocked by RLS.
+
+#I deployed in vercel after final psuh only
