@@ -188,6 +188,28 @@ input:focus, select:focus, textarea:focus {
 
 .composer { padding: 28px; }
 .composer-icon { width: 42px; height: 42px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 10px; background: #000; color: #fff; font-size: 24px; }
+.ai-draft {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 12px;
+  padding: 14px;
+  background: #f8f8f8;
+}
+.ai-draft label { display: grid; gap: 7px; }
+.ai-draft span {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.ai-draft .secondary-button {
+  min-width: 180px;
+  white-space: nowrap;
+}
 .form-grid { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
 .form-grid label { display: grid; gap: 7px; }
 .form-grid label > span, .option-editor > span { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
@@ -290,6 +312,8 @@ input:focus, select:focus, textarea:focus {
   .metric-card { min-height: 130px; padding: 18px; }
   .metric-card strong { font-size: 31px; }
   .panel, .poll-card, .composer { padding: 18px; }
+  .ai-draft { grid-template-columns: 1fr; }
+  .ai-draft .secondary-button { width: 100%; }
   .form-grid { grid-template-columns: 1fr; }
   .form-grid .wide { grid-column: auto; }
   .composer-footer, .section-title { align-items: flex-start; }

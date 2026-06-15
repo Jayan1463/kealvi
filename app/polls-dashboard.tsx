@@ -288,6 +288,8 @@ function PollComposer(props: {
   refresh: () => Promise<void>;
   notify: (message: string) => void;
 }) {
+  const [aiTopic, setAiTopic] = useState("");
+  const [aiLoading, setAiLoading] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("General");
@@ -313,9 +315,33 @@ function PollComposer(props: {
     setSubmitting(false);
   }
 
+  async function generateDraft() {
+    setAiLoading(true);
+    const response = await fetch("/api/ai/poll-draft", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ topic: aiTopic, category }),
+    });
+    const result = await response.json();
+    if (response.ok) {
+      setTitle(result.draft.title);
+      setDescription(result.draft.description);
+      setCategory(result.draft.category);
+      setOptions(result.draft.options);
+      props.notify("AI draft added to the composer.");
+    } else {
+      props.notify(result.error ?? "Could not generate an AI draft.");
+    }
+    setAiLoading(false);
+  }
+
   return (
     <section className="composer panel">
       <div className="composer-head"><div><span className="composer-icon">+</span><div><h3>Start a new poll</h3><p>Ask one clear question and offer distinct choices.</p></div></div><span className="tag">{props.data.configured ? "Database ready" : "Setup required"}</span></div>
+      <div className="ai-draft">
+        <label><span>AI draft topic</span><input value={aiTopic} onChange={(e) => setAiTopic(e.target.value)} placeholder="Example: next workshop topic for students" maxLength={180} /></label>
+        <button className="secondary-button" disabled={aiLoading || aiTopic.trim().length < 3} onClick={generateDraft}>{aiLoading ? "Drafting..." : "Generate with Gemini"}</button>
+      </div>
       <div className="form-grid">
         <label className="wide"><span>Question</span><input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="What should we prioritize next?" maxLength={180} /></label>
         <label className="wide"><span>Context <em>optional</em></span><textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Add a little context to help people choose…" maxLength={500} /></label>
