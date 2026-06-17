@@ -128,6 +128,10 @@ const demoRows: PollRow[] = [
   },
 ];
 
+function normalizeQuestion(value: string) {
+  return value.trim().replace(/\s+/g, " ").toLowerCase();
+}
+
 function normalizePoll(row: PollRow, voterId?: string): Poll {
   const sortedOptions = [...(row.poll_options ?? [])].sort(
     (a, b) => a.position - b.position
@@ -281,6 +285,21 @@ export async function createPoll(input: {
   const supabase = getSupabase();
   if (!supabase) throw new Error("Supabase is not configured");
 
+  const normalizedQuestion = normalizeQuestion(input.title);
+  const { data: existingPolls, error: duplicateCheckError } = await supabase
+    .from("polls")
+    .select("id,title")
+    .limit(1000);
+
+  if (duplicateCheckError) throw new Error(duplicateCheckError.message);
+  if (
+    (existingPolls ?? []).some(
+      (poll) => normalizeQuestion(String(poll.title ?? "")) === normalizedQuestion
+    )
+  ) {
+    throw new Error("This question already exists. Please ask a different question.");
+  }
+
   const { data: poll, error: pollError } = await supabase
     .from("polls")
     .insert({
@@ -295,7 +314,12 @@ export async function createPoll(input: {
     .select("id")
     .single();
 
-  if (pollError) throw new Error(pollError.message);
+  if (pollError) {
+    if (pollError.code === "23505") {
+      throw new Error("This question already exists. Please ask a different question.");
+    }
+    throw new Error(pollError.message);
+  }
 
   const { error: optionsError } = await supabase.from("poll_options").insert(
     input.options.map((label, position) => ({

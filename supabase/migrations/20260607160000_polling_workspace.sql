@@ -39,6 +39,7 @@ create table if not exists poll_votes (
 create index if not exists polls_created_at_idx on polls (created_at desc);
 create index if not exists polls_status_expires_idx on polls (status, expires_at);
 create index if not exists polls_category_idx on polls (category);
+create unique index if not exists polls_unique_question_idx on polls (lower(btrim(title)));
 create index if not exists poll_options_poll_id_idx on poll_options (poll_id);
 create index if not exists poll_votes_poll_id_idx on poll_votes (poll_id);
 create index if not exists poll_votes_option_id_idx on poll_votes (option_id);

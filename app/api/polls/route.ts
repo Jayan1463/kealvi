@@ -17,7 +17,7 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const title = String(body.title ?? "").trim();
+    const title = String(body.title ?? "").trim().replace(/\s+/g, " ");
     const creatorName = String(body.creatorName ?? "").trim() || "Anonymous";
     const creatorId = String(body.creatorId ?? "").trim();
     const category = String(body.category ?? "General").trim();
@@ -47,9 +47,11 @@ export async function POST(request: Request) {
     });
     return Response.json({ id }, { status: 201 });
   } catch (error) {
+    const message = error instanceof Error ? error.message : "Could not create poll";
+    const status = /already exists/i.test(message) ? 409 : 500;
     return Response.json(
-      { error: error instanceof Error ? error.message : "Could not create poll" },
-      { status: 500 }
+      { error: message },
+      { status }
     );
   }
 }
