@@ -412,3 +412,5 @@ export async function closePoll(pollId: string, creatorId: string) {
   if (error) throw new Error(error.message);
   if (!data) throw new Error("Only the poll creator can close this poll");
 }
+
+

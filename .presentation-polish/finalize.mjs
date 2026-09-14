@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import sharp from 'sharp';
+import {Presentation,PresentationFile,FileBlob} from '@oai/artifact-tool';
+import {finalizePresentation,resolvePresentationFont} from '/Users/mrithyunjayanm/.codex/plugins/cache/openai-primary-runtime/presentations/26.909.12148/skills/presentations/container_tools/artifact_tool_utils.mjs';
+const root=process.cwd(), work=path.join(root,'.presentation-polish');
+const skill='/Users/mrithyunjayanm/.codex/plugins/cache/openai-primary-runtime/presentations/26.909.12148/skills/presentations';
+const font='Arial',candidate=path.join(work,'candidate.pptx');
+const finalPath=path.join(root,'presentations','Kealvi-Mrithyunjayan-Polished.pptx');
+const result=await finalizePresentation({workspaceDir:root,candidatePath:candidate,finalPath,pythonExecutable:'/Users/mrithyunjayanm/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3',integrityValidatorPath:path.join(skill,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(skill,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-heading-fit','--require-native-table-slide','6'],requiredNativeTableOwnerSlides:[6],fontPolicy:{basis:'design',families:[font]},verifyArtifactToolImport:true,receiptPath:path.join(work,'validation-final.json')});console.log(JSON.stringify(result));

@@ -1,0 +1,296 @@
+{"kind":"deck","id":"pr/x7x1sl","name":"Deck"}
+{"kind":"layout","layoutId":"fb785469-5839-4811-a81f-14866d3ab8c1","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"577f87d3-e608-49d0-b413-5f0f32fd04c2","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/nm01pq","slide":1,"title":"Coimbatore Institute of Technology","textShapes":10}
+{"kind":"textbox","id":"sh/xkfmxw7y","slide":1,"text":"Coimbatore Institute of Technology","textPreview":"Coimbatore Institute of Technology","textChars":34,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/aho3mh87","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/vix4vmps","slide":1,"text":"KEALVI","textPreview":"KEALVI","textChars":6,"textLines":1,"bbox":[64,120,940,120]}
+{"kind":"textbox","id":"sh/kn65sb6p","slide":1,"text":"Live audience workspace","textPreview":"Live audience workspace","textChars":23,"textLines":1,"bbox":[68,259,1040,72]}
+{"kind":"textbox","id":"sh/5ozm1g7u","slide":1,"text":"Mrithyunjayan M","textPreview":"Mrithyunjayan M","textChars":15,"textLines":1,"bbox":[68,402,900,42]}
+{"kind":"textbox","id":"sh/ilonq1oj","slide":1,"text":"Register No. 2403717610421033","textPreview":"Register No. 2403717610421033","textChars":29,"textLines":1,"bbox":[68,453,900,34]}
+{"kind":"textbox","id":"sh/jmx4z6p4","slide":1,"text":"B.E. Computer Science and Engineering","textPreview":"B.E. Computer Science and Engineering","textChars":37,"textLines":1,"bbox":[68,493,1050,35]}
+{"kind":"textbox","id":"sh/0rmlg7q5","slide":1,"text":"13 September 2026","textPreview":"13 September 2026","textChars":17,"textLines":1,"bbox":[68,545,800,35]}
+{"kind":"textbox","id":"sh/xoj6x8f2","slide":1,"text":"Government Aided Autonomous Institution Affiliated to Anna University","textPreview":"Government Aided Autonomous Institution Affiliated to Anna University","textChars":69,"textLines":1,"bbox":[68,604,1100,29]}
+{"kind":"textbox","id":"sh/cna543eh","slide":1,"text":"Coimbatore 641014","textPreview":"Coimbatore 641014","textChars":17,"textLines":1,"bbox":[68,635,1000,28]}
+{"kind":"image","id":"im/03adw3yd","slide":1,"name":"","alt":"crest.png","bbox":[1090,65,120,120]}
+{"kind":"notes","id":"nt/nm01pq","slide":1,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 1. Institution: Government Aided Autonomous Institution Affiliated to Anna University, Coimbatore 641014."}
+{"kind":"slide","id":"sl/lnl4zm","slide":2,"title":"Presentation overview","textShapes":15}
+{"kind":"textbox","id":"sh/n2xc3yx0","slide":2,"text":"Presentation overview","textPreview":"Presentation overview","textChars":21,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/o3qdw3el","slide":2,"text":"Kealvi","textPreview":"Kealvi","textChars":6,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/94zu58f6","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/exobqtwj","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,177,90,58]}
+{"kind":"textbox","id":"sh/zyxczex4","slide":2,"text":"Context & objectives","textPreview":"Context & objectives","textChars":20,"textLines":1,"bbox":[176,179,1010,42]}
+{"kind":"textbox","id":"sh/0z6tsjep","slide":2,"text":"Introduction, problem statement and project goals","textPreview":"Introduction, problem statement and project goals","textChars":49,"textLines":1,"bbox":[176,226,1010,42]}
+{"kind":"textbox","id":"sh/10fu1ofu","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[64,291,90,58]}
+{"kind":"textbox","id":"sh/q94bm9w7","slide":2,"text":"Implementation","textPreview":"Implementation","textChars":14,"textLines":1,"bbox":[176,293,1010,42]}
+{"kind":"textbox","id":"sh/rudcvexs","slide":2,"text":"Technologies, application structure and features","textPreview":"Technologies, application structure and features","textChars":48,"textLines":1,"bbox":[176,340,1010,42]}
+{"kind":"textbox","id":"sh/rqdwra9s","slide":2,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[64,405,90,58]}
+{"kind":"textbox","id":"sh/qp4fy5sn","slide":2,"text":"Product walkthrough","textPreview":"Product walkthrough","textChars":19,"textLines":1,"bbox":[176,407,1010,42]}
+{"kind":"textbox","id":"sh/dsvet0ry","slide":2,"text":"Desktop screens and responsive mobile layouts","textPreview":"Desktop screens and responsive mobile layouts","textChars":45,"textLines":1,"bbox":[176,454,1010,42]}
+{"kind":"textbox","id":"sh/srmx0fad","slide":2,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[64,519,90,58]}
+{"kind":"textbox","id":"sh/fudwva94","slide":2,"text":"Interface study","textPreview":"Interface study","textChars":15,"textLines":1,"bbox":[176,521,1010,42]}
+{"kind":"textbox","id":"sh/et4f25sj","slide":2,"text":"Apple TV analysis, design lessons and conclusion","textPreview":"Apple TV analysis, design lessons and conclusion","textChars":48,"textLines":1,"bbox":[176,568,1010,42]}
+{"kind":"notes","id":"nt/lnl4zm","slide":2,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 2. "}
+{"kind":"slide","id":"sl/d289on","slide":3,"title":"A workspace for audience participation","textShapes":10}
+{"kind":"textbox","id":"sh/6xwfet4z","slide":3,"text":"A workspace for audience participation","textPreview":"A workspace for audience participation","textChars":38,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/t0ny983q","slide":3,"text":"Kealvi","textPreview":"Kealvi","textChars":6,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/8zexg3m5","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/vmpgbilg","slide":3,"text":"Kealvi brings poll creation, voting and result review into one responsive web application.","textPreview":"Kealvi brings poll creation, voting and result review into one responsive web application.","textChars":90,"textLines":1,"bbox":[64,180,1120,120]}
+{"kind":"textbox","id":"sh/ulgfid4v","slide":3,"text":"Core workflow","textPreview":"Core workflow","textChars":13,"textLines":1,"bbox":[64,330,1120,35]}
+{"kind":"textbox","id":"sh/ho7yds3m","slide":3,"text":"Create a poll, collect votes, review results and make a decision.","textPreview":"Create a poll, collect votes, review results and make a decision.","textChars":65,"textLines":1,"bbox":[64,369,1120,58]}
+{"kind":"textbox","id":"sh/gnyxknm1","slide":3,"text":"Audience","textPreview":"Audience","textChars":8,"textLines":1,"bbox":[64,430,1120,35]}
+{"kind":"textbox","id":"sh/bqlwze5c","slide":3,"text":"Teams, classrooms, communities and live sessions.","textPreview":"Teams, classrooms, communities and live sessions.","textChars":49,"textLines":1,"bbox":[64,469,1120,58]}
+{"kind":"textbox","id":"sh/apcf694r","slide":3,"text":"Interaction goal","textPreview":"Interaction goal","textChars":16,"textLines":1,"bbox":[64,530,1120,35]}
+{"kind":"textbox","id":"sh/w3m9cjqd","slide":3,"text":"Quick actions with clear feedback on desktop and mobile.","textPreview":"Quick actions with clear feedback on desktop and mobile.","textChars":56,"textLines":1,"bbox":[64,569,1120,58]}
+{"kind":"notes","id":"nt/d289on","slide":3,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 3. Results refresh every 15 seconds and after voting or publishing. Source: project README.md."}
+{"kind":"slide","id":"sl/5rxy72","slide":4,"title":"The problem with fragmented polling","textShapes":10}
+{"kind":"textbox","id":"sh/honul4re","slide":4,"text":"The problem with fragmented polling","textPreview":"The problem with fragmented polling","textChars":35,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/ulwbqpsn","slide":4,"text":"Kealvi","textPreview":"Kealvi","textChars":6,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/fm5cju98","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/szutofah","slide":4,"text":"Questions, responses and results often live in different tools.","textPreview":"Questions, responses and results often live in different tools.","textChars":63,"textLines":1,"bbox":[64,169,1120,70]}
+{"kind":"textbox","id":"sh/t03uhkr2","slide":4,"text":"Fragmented interaction","textPreview":"Fragmented interaction","textChars":22,"textLines":1,"bbox":[64,275,1120,35]}
+{"kind":"textbox","id":"sh/6xcbm5sr","slide":4,"text":"Separate forms and chat threads add friction for organizers and participants.","textPreview":"Separate forms and chat threads add friction for organizers and participants.","textChars":77,"textLines":1,"bbox":[64,314,1120,58]}
+{"kind":"textbox","id":"sh/7ylcfa9w","slide":4,"text":"Limited visibility","textPreview":"Limited visibility","textChars":18,"textLines":1,"bbox":[64,388,1120,35]}
+{"kind":"textbox","id":"sh/kvutkfal","slide":4,"text":"A scattered workflow makes active polls and response distribution harder to follow.","textPreview":"A scattered workflow makes active polls and response distribution harder to follow.","textChars":83,"textLines":1,"bbox":[64,427,1120,58]}
+{"kind":"textbox","id":"sh/5w3udkr6","slide":4,"text":"Weak decision support","textPreview":"Weak decision support","textChars":21,"textLines":1,"bbox":[64,501,1120,35]}
+{"kind":"textbox","id":"sh/94zep87m","slide":4,"text":"Raw responses need context, including participation history and engagement.","textPreview":"Raw responses need context, including participation history and engagement.","textChars":75,"textLines":1,"bbox":[64,540,1120,58]}
+{"kind":"notes","id":"nt/5rxy72","slide":4,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 4. "}
+{"kind":"slide","id":"sl/fciwbq","slide":5,"title":"Project objectives","textShapes":15}
+{"kind":"textbox","id":"sh/oralkbep","slide":5,"text":"Project objectives","textPreview":"Project objectives","textChars":18,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/3q14b6dk","slide":5,"text":"Kealvi","textPreview":"Kealvi","textChars":6,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/2ps3i1wz","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/xw3mhgvm","slide":5,"text":"Create and manage polls","textPreview":"Create and manage polls","textChars":23,"textLines":1,"bbox":[64,185,540,37]}
+{"kind":"textbox","id":"sh/cvalobe1","slide":5,"text":"Set a question, answer options, category and closing time.","textPreview":"Set a question, answer options, category and closing time.","textChars":58,"textLines":1,"bbox":[64,226,530,89]}
+{"kind":"textbox","id":"sh/bu14fqdg","slide":5,"text":"Support live voting","textPreview":"Support live voting","textChars":19,"textLines":1,"bbox":[662,185,540,37]}
+{"kind":"textbox","id":"sh/ats3mlwv","slide":5,"text":"Record responses and display the result distribution.","textPreview":"Record responses and display the result distribution.","textChars":53,"textLines":1,"bbox":[662,226,530,89]}
+{"kind":"textbox","id":"sh/lk3ml0vi","slide":5,"text":"Organize poll history","textPreview":"Organize poll history","textChars":21,"textLines":1,"bbox":[64,333,540,37]}
+{"kind":"textbox","id":"sh/kjulsvex","slide":5,"text":"Search and filter All polls, My polls, Voted and Saved.","textPreview":"Search and filter All polls, My polls, Voted and Saved.","textChars":55,"textLines":1,"bbox":[64,374,530,89]}
+{"kind":"textbox","id":"sh/et07ixcf","slide":5,"text":"Show participation insights","textPreview":"Show participation insights","textChars":27,"textLines":1,"bbox":[662,333,540,37]}
+{"kind":"textbox","id":"sh/futor2t0","slide":5,"text":"Review rankings, category summaries and recent activity.","textPreview":"Review rankings, category summaries and recent activity.","textChars":56,"textLines":1,"bbox":[662,374,530,89]}
+{"kind":"textbox","id":"sh/gv2pk7ul","slide":5,"text":"Support mobile use","textPreview":"Support mobile use","textChars":18,"textLines":1,"bbox":[64,481,540,37]}
+{"kind":"textbox","id":"sh/1wb6tcb6","slide":5,"text":"Keep navigation and essential actions accessible.","textPreview":"Keep navigation and essential actions accessible.","textChars":49,"textLines":1,"bbox":[64,522,530,89]}
+{"kind":"textbox","id":"sh/2xk7mhcr","slide":5,"text":"Assist poll drafting","textPreview":"Assist poll drafting","textChars":20,"textLines":1,"bbox":[662,481,540,37]}
+{"kind":"textbox","id":"sh/3ytov2tc","slide":5,"text":"Offer optional Gemini drafts alongside editable templates.","textPreview":"Offer optional Gemini drafts alongside editable templates.","textChars":58,"textLines":1,"bbox":[662,522,530,89]}
+{"kind":"notes","id":"nt/fciwbq","slide":5,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 5. Gemini requires configuration. It is not enabled in the supplied checkout."}
+{"kind":"slide","id":"sl/utjldd","slide":6,"title":"Technologies and tools","textShapes":3}
+{"kind":"textbox","id":"sh/ru5wnat0","slide":6,"text":"Technologies and tools","textPreview":"Technologies and tools","textChars":22,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/svyxgful","slide":6,"text":"Kealvi","textPreview":"Kealvi","textChars":6,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/dw7ep0bq","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"table","id":"tb/r2l0r618","slide":6,"name":"","rows":7,"cols":2,"preview":"Component | Role","bbox":[64,173,1152,432]}
+{"kind":"notes","id":"nt/utjldd","slide":6,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 6. Technology roles follow the supplied deck. Hosting listed here does not establish a live deployment."}
+{"kind":"slide","id":"sl/phvd4i","slide":7,"title":"System architecture","textShapes":12}
+{"kind":"textbox","id":"sh/54zehc7m","slide":7,"text":"System architecture","textPreview":"System architecture","textChars":19,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/ih8v6h8v","slide":7,"text":"Kealvi","textPreview":"Kealvi","textChars":6,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/jihwf2pg","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/wfqd47qp","slide":7,"text":"01  Browser interface","textPreview":"01  Browser interface","textChars":21,"textLines":1,"bbox":[64,180,1130,35]}
+{"kind":"textbox","id":"sh/hgzedc7a","slide":7,"text":"Audience and organizers use Next.js / React pages, forms and poll views.","textPreview":"Audience and organizers use Next.js / React pages, forms and poll views.","textChars":72,"textLines":1,"bbox":[64,219,1130,58]}
+{"kind":"textbox","id":"sh/udov2x8z","slide":7,"text":"02  Application routes","textPreview":"02  Application routes","textChars":22,"textLines":1,"bbox":[64,290,1130,35]}
+{"kind":"textbox","id":"sh/vexwb2p4","slide":7,"text":"Server handlers validate creation and voting requests, then return updated results.","textPreview":"Server handlers validate creation and voting requests, then return updated results.","textChars":83,"textLines":1,"bbox":[64,329,1130,58]}
+{"kind":"textbox","id":"sh/gbaxgr69","slide":7,"text":"03  Supabase / PostgreSQL","textPreview":"03  Supabase / PostgreSQL","textChars":25,"textLines":1,"bbox":[64,400,1130,35]}
+{"kind":"textbox","id":"sh/1cjepw7e","slide":7,"text":"Persistent data stores polls, answer options and recorded votes.","textPreview":"Persistent data stores polls, answer options and recorded votes.","textChars":64,"textLines":1,"bbox":[64,439,1130,58]}
+{"kind":"textbox","id":"sh/xgvi9wru","slide":7,"text":"04  Optional Gemini integration","textPreview":"04  Optional Gemini integration","textChars":31,"textLines":1,"bbox":[64,510,1130,35]}
+{"kind":"textbox","id":"sh/cfm10rap","slide":7,"text":"A server route requests a draft when the Gemini API key is configured.","textPreview":"A server route requests a draft when the Gemini API key is configured.","textChars":70,"textLines":1,"bbox":[64,549,1130,58]}
+{"kind":"textbox","id":"sh/bed07m94","slide":7,"text":"Browser storage retains display identity and saved polls. GitHub and Vercel support delivery.","textPreview":"Browser storage retains display identity and saved polls. GitHub and Vercel support delivery.","textChars":93,"textLines":1,"bbox":[64,626,1130,35]}
+{"kind":"notes","id":"nt/phvd4i","slide":7,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 7. Architecture clarified against project README.md: browser-local identity and bookmarks, server Route Handlers, Supabase persistence."}
+{"kind":"slide","id":"sl/lpv812","slide":8,"title":"Application capabilities","textShapes":15}
+{"kind":"textbox","id":"sh/x436t4zm","slide":8,"text":"Application capabilities","textPreview":"Application capabilities","textChars":24,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/a1cnyp0v","slide":8,"text":"Kealvi","textPreview":"Kealvi","textChars":6,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/b2loruhg","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/oza5wzip","slide":8,"text":"Overview and polling","textPreview":"Overview and polling","textChars":20,"textLines":1,"bbox":[64,185,540,37]}
+{"kind":"textbox","id":"sh/90jmpkza","slide":8,"text":"Workspace totals, editable templates, voting and poll closing.","textPreview":"Workspace totals, editable templates, voting and poll closing.","textChars":62,"textLines":1,"bbox":[64,226,530,89]}
+{"kind":"textbox","id":"sh/mxsnup0z","slide":8,"text":"Poll library","textPreview":"Poll library","textChars":12,"textLines":1,"bbox":[662,185,540,37]}
+{"kind":"textbox","id":"sh/ny14nuh4","slide":8,"text":"Saved polls, voting history, search and status filters.","textPreview":"Saved polls, voting history, search and status filters.","textChars":55,"textLines":1,"bbox":[662,226,530,89]}
+{"kind":"textbox","id":"sh/8ve58jy9","slide":8,"text":"Leaderboard and insights","textPreview":"Leaderboard and insights","textChars":24,"textLines":1,"bbox":[64,333,540,37]}
+{"kind":"textbox","id":"sh/twn61oze","slide":8,"text":"Contributor rankings and category-level participation.","textPreview":"Contributor rankings and category-level participation.","textChars":54,"textLines":1,"bbox":[64,374,530,89]}
+{"kind":"textbox","id":"sh/dkvu98z6","slide":8,"text":"Activity feed","textPreview":"Activity feed","textChars":13,"textLines":1,"bbox":[662,333,540,37]}
+{"kind":"textbox","id":"sh/cjmd03i1","slide":8,"text":"Recent poll launches and voting actions.","textPreview":"Recent poll launches and voting actions.","textChars":40,"textLines":1,"bbox":[662,374,530,89]}
+{"kind":"textbox","id":"sh/ritc7y1g","slide":8,"text":"Sharing and export","textPreview":"Sharing and export","textChars":18,"textLines":1,"bbox":[64,481,540,37]}
+{"kind":"textbox","id":"sh/qhkvyt0v","slide":8,"text":"Direct poll links and downloadable JSON results.","textPreview":"Direct poll links and downloadable JSON results.","textChars":48,"textLines":1,"bbox":[64,522,530,89]}
+{"kind":"textbox","id":"sh/pgbu5oja","slide":8,"text":"Responsive interface","textPreview":"Responsive interface","textChars":20,"textLines":1,"bbox":[662,481,540,37]}
+{"kind":"textbox","id":"sh/4v2twjip","slide":8,"text":"Desktop and mobile views with clear action feedback.","textPreview":"Desktop and mobile views with clear action feedback.","textChars":52,"textLines":1,"bbox":[662,522,530,89]}
+{"kind":"notes","id":"nt/lpv812","slide":8,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 8. "}
+{"kind":"slide","id":"sl/h527ik","slide":9,"title":"Overview dashboard","textShapes":4}
+{"kind":"textbox","id":"sh/idkry9gr","slide":9,"text":"Overview dashboard","textPreview":"Overview dashboard","textChars":18,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/5gva94f2","slide":9,"text":"Kealvi / Product walkthrough","textPreview":"Kealvi / Product walkthrough","textChars":28,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/kfm90zyh","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/614r29gn","slide":9,"text":"Workspace metrics provide a quick view of active polls, responses and recent activity.","textPreview":"Workspace metrics provide a quick view of active polls, responses and recent activity.","textChars":86,"textLines":1,"bbox":[64,189,286,284]}
+{"kind":"image","id":"im/2poze5cz","slide":9,"name":"","alt":"image-9-0.png","bbox":[390,166,826,480]}
+{"kind":"notes","id":"nt/h527ik","slide":9,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 9. Original supplied screenshot. Values describe the captured demonstration state."}
+{"kind":"slide","id":"sl/afb2mk","slide":10,"title":"Poll creation","textShapes":5}
+{"kind":"textbox","id":"sh/jmdojy90","slide":10,"text":"Poll creation","textPreview":"Poll creation","textChars":13,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/4nmpc3q5","slide":10,"text":"Kealvi / Product walkthrough","textPreview":"Kealvi / Product walkthrough","textChars":28,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/5ov6l8rq","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/srmpg3qh","slide":10,"text":"Templates give creators a starting point. Questions, options and closing times remain editable.","textPreview":"Templates give creators a starting point. Questions, options and closing times remain editable.","textChars":95,"textLines":1,"bbox":[64,188,286,284]}
+{"kind":"textbox","id":"sh/tsvqp8r2","slide":10,"text":"Page continues from left to right","textPreview":"Page continues from left to right","textChars":33,"textLines":1,"bbox":[390,635,826,25]}
+{"kind":"image","id":"im/valgre9s","slide":10,"name":"","alt":"desktop-9-image-9-1.png-0.png","bbox":[390,166,402,455]}
+{"kind":"image","id":"im/a9czi987","slide":10,"name":"","alt":"desktop-9-image-9-1.png-1.png","bbox":[808,166,402,455]}
+{"kind":"notes","id":"nt/afb2mk","slide":10,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 9. Original supplied screenshot. Values describe the captured demonstration state."}
+{"kind":"slide","id":"sl/79vt6p","slide":11,"title":"Live voting","textShapes":5}
+{"kind":"textbox","id":"sh/qponexoz","slide":11,"text":"Live voting","textPreview":"Live voting","textChars":11,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/dsf69cnq","slide":11,"text":"Kealvi / Product walkthrough","textPreview":"Kealvi / Product walkthrough","textChars":28,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/cr65g765","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/lgf6dcnm","slide":11,"text":"Participants choose an answer and receive clear confirmation with updated counts and percentages.","textPreview":"Participants choose an answer and receive clear confirmation with updated counts and percentages.","textChars":97,"textLines":1,"bbox":[64,188,286,284]}
+{"kind":"textbox","id":"sh/0v65k761","slide":11,"text":"Page continues from left to right","textPreview":"Page continues from left to right","textChars":33,"textLines":1,"bbox":[390,635,826,25]}
+{"kind":"image","id":"im/yh872ts7","slide":11,"name":"","alt":"desktop-10-image-10-0.png-0.png","bbox":[390,166,402,455]}
+{"kind":"image","id":"im/z2hoby9c","slide":11,"name":"","alt":"desktop-10-image-10-0.png-1.png","bbox":[808,166,402,455]}
+{"kind":"notes","id":"nt/79vt6p","slide":11,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 10. Original supplied screenshot. Values describe the captured demonstration state."}
+{"kind":"slide","id":"sl/8db5pg","slide":12,"title":"Closed poll results","textShapes":4}
+{"kind":"textbox","id":"sh/al47el8b","slide":12,"text":"Closed poll results","textPreview":"Closed poll results","textChars":19,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/x8vq9grm","slide":12,"text":"Kealvi / Product walkthrough","textPreview":"Kealvi / Product walkthrough","textChars":28,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/wnm9gbqh","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/y94ril87","slide":12,"text":"Closing a poll disables voting while keeping the final result distribution available.","textPreview":"Closing a poll disables voting while keeping the final result distribution available.","textChars":85,"textLines":1,"bbox":[64,189,286,284]}
+{"kind":"image","id":"im/ehofq9sb","slide":12,"name":"","alt":"image-10-1.png","bbox":[390,166,826,480]}
+{"kind":"notes","id":"nt/8db5pg","slide":12,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 10. Original supplied screenshot. Values describe the captured demonstration state."}
+{"kind":"slide","id":"sl/ysa6ot","slide":13,"title":"Search and empty states","textShapes":4}
+{"kind":"textbox","id":"sh/ytwjqxwn","slide":13,"text":"Search and empty states","textPreview":"Search and empty states","textChars":23,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/lwn21cve","slide":13,"text":"Kealvi / Product walkthrough","textPreview":"Kealvi / Product walkthrough","textChars":28,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/kve1s7et","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/a5cjmxwb","slide":13,"text":"When no poll matches, the interface explains the empty state and suggests a next step.","textPreview":"When no poll matches, the interface explains the empty state and suggests a next step.","textChars":86,"textLines":1,"bbox":[64,189,286,284]}
+{"kind":"image","id":"im/ix8rqxwr","slide":13,"name":"","alt":"image-10-2.png","bbox":[390,166,826,480]}
+{"kind":"notes","id":"nt/ysa6ot","slide":13,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 10. Original supplied screenshot. Values describe the captured demonstration state."}
+{"kind":"slide","id":"sl/oyvorl","slide":14,"title":"Shared poll view","textShapes":4}
+{"kind":"textbox","id":"sh/9kfup0ze","slide":14,"text":"Shared poll view","textPreview":"Shared poll view","textChars":16,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/mhovelg3","slide":14,"text":"Kealvi / Product walkthrough","textPreview":"Kealvi / Product walkthrough","textChars":28,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/nixcnqh8","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/x8zutkzq","slide":14,"text":"A direct link focuses the workspace on one poll. Users can return to the full library.","textPreview":"A direct link focuses the workspace on one poll. Users can return to the full library.","textChars":86,"textLines":1,"bbox":[64,189,286,284]}
+{"kind":"image","id":"im/do7id8jy","slide":14,"name":"","alt":"image-11-1.png","bbox":[390,166,826,480]}
+{"kind":"notes","id":"nt/oyvorl","slide":14,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 11. Original supplied screenshot. Values describe the captured demonstration state."}
+{"kind":"slide","id":"sl/ygjghl","slide":15,"title":"Saved polls","textShapes":4}
+{"kind":"textbox","id":"sh/ju987m1g","slide":15,"text":"Saved polls","textPreview":"Saved polls","textChars":11,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/kvi90r21","slide":15,"text":"Kealvi / Product walkthrough","textPreview":"Kealvi / Product walkthrough","textChars":28,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/lwra9wjm","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/bq98321k","slide":15,"text":"Bookmarks keep useful polls within reach and persist across reloads in the same browser.","textPreview":"Bookmarks keep useful polls within reach and persist across reloads in the same browser.","textChars":88,"textLines":1,"bbox":[64,189,286,284]}
+{"kind":"image","id":"im/jyxo72hc","slide":15,"name":"","alt":"image-11-0.png","bbox":[390,166,826,480]}
+{"kind":"notes","id":"nt/ygjghl","slide":15,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 11. Original supplied screenshot. Values describe the captured demonstration state."}
+{"kind":"slide","id":"sl/n0tcdr","slide":16,"title":"My polls","textShapes":4}
+{"kind":"textbox","id":"sh/pofm9432","slide":16,"text":"My polls","textPreview":"My polls","textChars":8,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/21onepkr","slide":16,"text":"Kealvi / Product walkthrough","textPreview":"Kealvi / Product walkthrough","textChars":28,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/n2x47ulc","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/10fm5k36","slide":16,"text":"Creators can revisit polls made in their browser and manage their closing state.","textPreview":"Creators can revisit polls made in their browser and manage their closing state.","textChars":80,"textLines":1,"bbox":[64,189,286,284]}
+{"kind":"image","id":"im/14fud4fa","slide":16,"name":"","alt":"image-11-2.png","bbox":[390,166,826,480]}
+{"kind":"notes","id":"nt/n0tcdr","slide":16,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 11. Original supplied screenshot. Values describe the captured demonstration state."}
+{"kind":"slide","id":"sl/6p1vbe","slide":17,"title":"Voting history","textShapes":4}
+{"kind":"textbox","id":"sh/qt0b6hsb","slide":17,"text":"Voting history","textPreview":"Voting history","textChars":14,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/dwrahwr2","slide":17,"text":"Kealvi / Product walkthrough","textPreview":"Kealvi / Product walkthrough","textChars":28,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/cvit8rah","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/2pgb2xsf","slide":17,"text":"The Voted collection provides a convenient way to revisit participated polls and their results.","textPreview":"The Voted collection provides a convenient way to revisit participated polls and their results.","textChars":95,"textLines":1,"bbox":[64,189,286,284]}
+{"kind":"image","id":"im/itwb2dgf","slide":17,"name":"","alt":"image-11-3.png","bbox":[390,166,826,480]}
+{"kind":"notes","id":"nt/6p1vbe","slide":17,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 11. Original supplied screenshot. Values describe the captured demonstration state."}
+{"kind":"slide","id":"sl/x9wmzo","slide":18,"title":"Contributor leaderboard","textShapes":4}
+{"kind":"textbox","id":"sh/axgb2lo3","slide":18,"text":"Contributor leaderboard","textPreview":"Contributor leaderboard","textChars":23,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/x07ux0nu","slide":18,"text":"Kealvi / Product walkthrough","textPreview":"Kealvi / Product walkthrough","textChars":28,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/wzyt4v69","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/mtwbylo7","slide":18,"text":"The leaderboard brings poll creation and named voting activity into one contributor view.","textPreview":"The leaderboard brings poll creation and named voting activity into one contributor view.","textChars":89,"textLines":1,"bbox":[64,189,286,284]}
+{"kind":"image","id":"im/2h8f29cv","slide":18,"name":"","alt":"image-12-0.png","bbox":[390,166,826,480]}
+{"kind":"notes","id":"nt/x9wmzo","slide":18,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 12. Original supplied screenshot. Values describe the captured demonstration state."}
+{"kind":"slide","id":"sl/wtmdis","slide":19,"title":"Participation insights","textShapes":4}
+{"kind":"textbox","id":"sh/ozqd0n6d","slide":19,"text":"Participation insights","textPreview":"Participation insights","textChars":22,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/3yhw7i5s","slide":19,"text":"Kealvi / Product walkthrough","textPreview":"Kealvi / Product walkthrough","textChars":28,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/2x8vydon","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/c3ad4n6p","slide":19,"text":"Engagement indicators and category summaries help users interpret participation.","textPreview":"Engagement indicators and category summaries help users interpret participation.","textChars":80,"textLines":1,"bbox":[64,189,286,284]}
+{"kind":"image","id":"im/83utkj29","slide":19,"name":"","alt":"image-12-1.png","bbox":[390,166,826,480]}
+{"kind":"notes","id":"nt/wtmdis","slide":19,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 12. Original supplied screenshot. Values describe the captured demonstration state."}
+{"kind":"slide","id":"sl/2m1vot","slide":20,"title":"Activity feed","textShapes":4}
+{"kind":"textbox","id":"sh/hgrm1cbe","slide":20,"text":"Activity feed","textPreview":"Activity feed","textChars":13,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/udg36xsn","slide":20,"text":"Kealvi / Product walkthrough","textPreview":"Kealvi / Product walkthrough","textChars":28,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/vep4z2t8","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/tc7mxsb2","slide":20,"text":"Recent poll launches and votes appear with context and relative time indicators.","textPreview":"Recent poll launches and votes appear with context and relative time indicators.","textChars":80,"textLines":1,"bbox":[64,189,286,284]}
+{"kind":"image","id":"im/18vut4ve","slide":20,"name":"","alt":"image-12-2.png","bbox":[390,166,826,480]}
+{"kind":"notes","id":"nt/2m1vot","slide":20,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 12. Original supplied screenshot. Values describe the captured demonstration state."}
+{"kind":"slide","id":"sl/2fvtzu","slide":21,"title":"Mobile overview","textShapes":4}
+{"kind":"textbox","id":"sh/b6lwj65k","slide":21,"text":"Mobile overview","textPreview":"Mobile overview","textChars":15,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/c7udcb65","slide":21,"text":"Kealvi / Responsive design","textPreview":"Kealvi / Responsive design","textChars":26,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/d8ne5gnq","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/edsv2hor","slide":21,"text":"Page continues from left to right","textPreview":"Page continues from left to right","textChars":33,"textLines":1,"bbox":[64,638,1152,25]}
+{"kind":"image","id":"im/bmdkzq14","slide":21,"name":"","alt":"mobile-0-0.png","bbox":[64,166,260,451]}
+{"kind":"image","id":"im/alkjqlkj","slide":21,"name":"","alt":"mobile-0-1.png","bbox":[352,166,260,451]}
+{"kind":"image","id":"im/xov21gja","slide":21,"name":"","alt":"mobile-0-2.png","bbox":[640,166,260,451]}
+{"kind":"image","id":"im/cnm1sv2p","slide":21,"name":"","alt":"mobile-0-3.png","bbox":[928,166,260,451]}
+{"kind":"notes","id":"nt/2fvtzu","slide":21,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 13. Original full-page mobile screenshot, divided into consecutive sections for readability. No page content omitted."}
+{"kind":"slide","id":"sl/zcii5m","slide":22,"title":"Mobile poll room","textShapes":4}
+{"kind":"textbox","id":"sh/fixcripk","slide":22,"text":"Mobile poll room","textPreview":"Mobile poll room","textChars":16,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/gj6t036p","slide":22,"text":"Kealvi / Responsive design","textPreview":"Kealvi / Responsive design","textChars":26,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/1kfut87a","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/tgfup87e","slide":22,"text":"Page continues from left to right","textPreview":"Page continues from left to right","textChars":33,"textLines":1,"bbox":[64,638,1152,25]}
+{"kind":"image","id":"im/rqx4vml8","slide":22,"name":"","alt":"mobile-1-0.png","bbox":[64,166,356,451]}
+{"kind":"image","id":"im/qponmhk3","slide":22,"name":"","alt":"mobile-1-1.png","bbox":[448,166,356,451]}
+{"kind":"image","id":"im/dszmxw3e","slide":22,"name":"","alt":"mobile-1-2.png","bbox":[832,166,356,451]}
+{"kind":"notes","id":"nt/zcii5m","slide":22,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 13. Original full-page mobile screenshot, divided into consecutive sections for readability. No page content omitted."}
+{"kind":"slide","id":"sl/gi7yb3","slide":23,"title":"Mobile activity","textShapes":4}
+{"kind":"textbox","id":"sh/jutcfyxs","slide":23,"text":"Mobile activity","textPreview":"Mobile activity","textChars":15,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/4v2d8jed","slide":23,"text":"Kealvi / Responsive design","textPreview":"Kealvi / Responsive design","textChars":26,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/5wbuhofy","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/sjmdc3ep","slide":23,"text":"Page continues from left to right","textPreview":"Page continues from left to right","textChars":33,"textLines":1,"bbox":[64,638,1152,25]}
+{"kind":"image","id":"im/nq5sf2l4","slide":23,"name":"","alt":"mobile-2-0.png","bbox":[64,166,548,451]}
+{"kind":"image","id":"im/mpwr6x4j","slide":23,"name":"","alt":"mobile-2-1.png","bbox":[640,166,548,451]}
+{"kind":"notes","id":"nt/gi7yb3","slide":23,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 13. Original full-page mobile screenshot, divided into consecutive sections for readability. No page content omitted."}
+{"kind":"slide","id":"sl/o5s4ln","slide":24,"title":"Apple TV: content discovery","textShapes":8}
+{"kind":"textbox","id":"sh/tw7q50n2","slide":24,"text":"Apple TV: content discovery","textPreview":"Apple TV: content discovery","textChars":27,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/69gral4b","slide":24,"text":"Apple TV / Interface study","textPreview":"Apple TV / Interface study","textChars":26,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/rup83q5w","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/10ra90ny","slide":24,"text":"Home","textPreview":"Home","textChars":4,"textLines":1,"bbox":[64,552,264,39]}
+{"kind":"textbox","id":"sh/fyps7a58","slide":24,"text":"Apple TV+","textPreview":"Apple TV+","textChars":9,"textLines":1,"bbox":[358,552,264,39]}
+{"kind":"textbox","id":"sh/h4nqxgnu","slide":24,"text":"Store","textPreview":"Store","textChars":5,"textLines":1,"bbox":[652,552,264,39]}
+{"kind":"textbox","id":"sh/sf2pcbmd","slide":24,"text":"Search","textPreview":"Search","textChars":6,"textLines":1,"bbox":[946,552,264,39]}
+{"kind":"textbox","id":"sh/reto36ls","slide":24,"text":"Featured artwork introduces content. Play, save and persistent navigation support the next action.","textPreview":"Featured artwork introduces content. Play, save and persistent navigation support the next action.","textChars":98,"textLines":1,"bbox":[64,614,1152,51]}
+{"kind":"image","id":"im/5wzu5kf2","slide":24,"name":"","alt":"image-14-0.jpeg","bbox":[64,170,266,365]}
+{"kind":"image","id":"im/3uxc3ahw","slide":24,"name":"","alt":"image-14-1.jpeg","bbox":[358,170,266,365]}
+{"kind":"image","id":"im/d0ze9kfy","slide":24,"name":"","alt":"image-14-2.jpeg","bbox":[652,170,266,365]}
+{"kind":"image","id":"im/ap0zmxkn","slide":24,"name":"","alt":"image-14-3.jpeg","bbox":[946,170,266,365]}
+{"kind":"notes","id":"nt/o5s4ln","slide":24,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 14. Interface observations relate to the supplied captures, not a current product audit."}
+{"kind":"slide","id":"sl/m3m5hw","slide":25,"title":"Apple TV: library and account","textShapes":7}
+{"kind":"textbox","id":"sh/f6twbuh0","slide":25,"text":"Apple TV: library and account","textPreview":"Apple TV: library and account","textChars":29,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/g7mx4zyl","slide":25,"text":"Apple TV / Interface study","textPreview":"Apple TV / Interface study","textChars":26,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/18ved4z6","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/sj2x0zip","slide":25,"text":"Library","textPreview":"Library","textChars":7,"textLines":1,"bbox":[720,195,474,43]}
+{"kind":"textbox","id":"sh/tkbe94za","slide":25,"text":"A dedicated destination for purchased content and an explanatory empty state.","textPreview":"A dedicated destination for purchased content and an explanatory empty state.","textChars":77,"textLines":1,"bbox":[720,250,460,110]}
+{"kind":"textbox","id":"sh/ad4fatgn","slide":25,"text":"Account","textPreview":"Account","textChars":7,"textLines":1,"bbox":[720,391,474,43]}
+{"kind":"textbox","id":"sh/bexgjeh8","slide":25,"text":"Account settings group subscriptions, purchases and family-related controls.","textPreview":"Account settings group subscriptions, purchases and family-related controls.","textChars":76,"textLines":1,"bbox":[720,446,460,120]}
+{"kind":"image","id":"im/zehszixo","slide":25,"name":"","alt":"image-15-0.jpeg","bbox":[64,163,278,450]}
+{"kind":"image","id":"im/et8rqdgj","slide":25,"name":"","alt":"image-15-1.jpeg","bbox":[378,163,278,450]}
+{"kind":"notes","id":"nt/m3m5hw","slide":25,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 15. "}
+{"kind":"slide","id":"sl/fdi0q4","slide":26,"title":"Apple TV: stakeholders and services","textShapes":7}
+{"kind":"textbox","id":"sh/kba10z61","slide":26,"text":"Apple TV: stakeholders and services","textPreview":"Apple TV: stakeholders and services","textChars":35,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/ja1k7upg","slide":26,"text":"Apple TV / Interface study","textPreview":"Apple TV / Interface study","textChars":26,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/i98jy9ov","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/tgj2do7i","slide":26,"text":"Stakeholders","textPreview":"Stakeholders","textChars":12,"textLines":1,"bbox":[64,180,530,44]}
+{"kind":"textbox","id":"sh/sfa14j6x","slide":26,"text":"Viewers and subscribers\nStudios and content providers\nPurchase and rental operations\nRecommendation and analytics teams\nAdvertising and promotional partners\nSupport and account teams","textPreview":"Viewers and subscribers | Studios and content providers | Purchase and rental operations | Recommendation and analytics teams | Advertisi...","textChars":182,"textLines":6,"bbox":[64,246,530,344]}
+{"kind":"textbox","id":"sh/7e1kbepc","slide":26,"text":"Supporting services","textPreview":"Supporting services","textChars":19,"textLines":1,"bbox":[664,180,550,44]}
+{"kind":"textbox","id":"sh/6dsj29o7","slide":26,"text":"Authentication, accounts and family sharing\nSubscriptions, payments and purchases\nStreaming and content delivery\nSearch, voice search and recommendations\nWatchlists and library management\nNotifications and usage analytics","textPreview":"Authentication, accounts and family sharing | Subscriptions, payments and purchases | Streaming and content delivery | Search, voice sear...","textChars":221,"textLines":6,"bbox":[664,246,550,344]}
+{"kind":"notes","id":"nt/fdi0q4","slide":26,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 15. Service categories from the supplied analysis, not verified internal Apple architecture."}
+{"kind":"slide","id":"sl/9bpd4a","slide":27,"title":"Design lessons for Kealvi","textShapes":15}
+{"kind":"textbox","id":"sh/u94re9gb","slide":27,"text":"Design lessons for Kealvi","textPreview":"Design lessons for Kealvi","textChars":25,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/hwvqpof2","slide":27,"text":"Kealvi","textPreview":"Kealvi","textChars":6,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/wvm9gjyh","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/jyx8ryxs","slide":27,"text":"Visible primary actions","textPreview":"Visible primary actions","textChars":23,"textLines":1,"bbox":[64,185,540,37]}
+{"kind":"textbox","id":"sh/ixoritgn","slide":27,"text":"Create poll remains easy to find, like prominent playback actions.","textPreview":"Create poll remains easy to find, like prominent playback actions.","textChars":66,"textLines":1,"bbox":[64,226,530,89]}
+{"kind":"textbox","id":"sh/50fqt8fy","slide":27,"text":"Consistent navigation","textPreview":"Consistent navigation","textChars":21,"textLines":1,"bbox":[662,185,540,37]}
+{"kind":"textbox","id":"sh/4z69k3yd","slide":27,"text":"Stable destinations help users move between workspace views.","textPreview":"Stable destinations help users move between workspace views.","textChars":60,"textLines":1,"bbox":[662,226,530,89]}
+{"kind":"textbox","id":"sh/z2t8fuho","slide":27,"text":"Saved content","textPreview":"Saved content","textChars":13,"textLines":1,"bbox":[64,333,540,37]}
+{"kind":"textbox","id":"sh/y1k76pg3","slide":27,"text":"Saved polls and My polls provide familiar ways to return to content.","textPreview":"Saved polls and My polls provide familiar ways to return to content.","textChars":68,"textLines":1,"bbox":[64,374,530,89]}
+{"kind":"textbox","id":"sh/c3utcbi1","slide":27,"text":"Fast discovery","textPreview":"Fast discovery","textChars":14,"textLines":1,"bbox":[662,333,540,37]}
+{"kind":"textbox","id":"sh/d43ulgjm","slide":27,"text":"Search and filters reduce the effort of finding a relevant poll.","textPreview":"Search and filters reduce the effort of finding a relevant poll.","textChars":64,"textLines":1,"bbox":[662,374,530,89]}
+{"kind":"textbox","id":"sh/q1cba10v","slide":27,"text":"Immediate feedback","textPreview":"Immediate feedback","textChars":18,"textLines":1,"bbox":[64,481,540,37]}
+{"kind":"textbox","id":"sh/b2lcj61g","slide":27,"text":"Vote confirmation, closed states and empty states explain what happened.","textPreview":"Vote confirmation, closed states and empty states explain what happened.","textChars":72,"textLines":1,"bbox":[64,522,530,89]}
+{"kind":"textbox","id":"sh/07etgbid","slide":27,"text":"Personal context","textPreview":"Personal context","textChars":16,"textLines":1,"bbox":[662,481,540,37]}
+{"kind":"textbox","id":"sh/l8nupgji","slide":27,"text":"Display names connect contributions with the activity feed and rankings.","textPreview":"Display names connect contributions with the activity feed and rankings.","textChars":72,"textLines":1,"bbox":[662,522,530,89]}
+{"kind":"notes","id":"nt/9bpd4a","slide":27,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 16. "}
+{"kind":"slide","id":"sl/yqiulu","slide":28,"title":"Conclusion","textShapes":10}
+{"kind":"textbox","id":"sh/vyhw32x0","slide":28,"text":"Conclusion","textPreview":"Conclusion","textChars":10,"textLines":1,"bbox":[64,62,1152,88]}
+{"kind":"textbox","id":"sh/wjqdc7el","slide":28,"text":"Kealvi","textPreview":"Kealvi","textChars":6,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/xkze5cf6","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/mtov6xwj","slide":28,"text":"Kealvi combines the complete polling workflow in one responsive workspace.","textPreview":"Kealvi combines the complete polling workflow in one responsive workspace.","textChars":74,"textLines":1,"bbox":[64,177,1130,112]}
+{"kind":"textbox","id":"sh/nuxcz2x4","slide":28,"text":"Practical full-stack integration","textPreview":"Practical full-stack integration","textChars":32,"textLines":1,"bbox":[64,324,1130,35]}
+{"kind":"textbox","id":"sh/ovqd87ep","slide":28,"text":"The interface connects poll creation and voting with Supabase persistence.","textPreview":"The interface connects poll creation and voting with Supabase persistence.","textChars":74,"textLines":1,"bbox":[64,363,1130,58]}
+{"kind":"textbox","id":"sh/9wze1sfu","slide":28,"text":"Clear participation feedback","textPreview":"Clear participation feedback","textChars":28,"textLines":1,"bbox":[64,426,1130,35]}
+{"kind":"textbox","id":"sh/6psvihwn","slide":28,"text":"Results, collections, insights and activity support review and follow-up.","textPreview":"Results, collections, insights and activity support review and follow-up.","textChars":73,"textLines":1,"bbox":[64,465,1130,58]}
+{"kind":"textbox","id":"sh/7q1wbmx8","slide":28,"text":"Consistent interaction design","textPreview":"Consistent interaction design","textChars":29,"textLines":1,"bbox":[64,528,1130,35]}
+{"kind":"textbox","id":"sh/7ipgne1o","slide":28,"text":"The Apple TV study informs primary actions, navigation and saved-content patterns.","textPreview":"The Apple TV study informs primary actions, navigation and saved-content patterns.","textChars":82,"textLines":1,"bbox":[64,567,1130,58]}
+{"kind":"notes","id":"nt/yqiulu","slide":28,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 17. Optional Gemini drafting requires configuration."}
+{"kind":"slide","id":"sl/ttxfcn","slide":29,"title":"Coimbatore Institute of Technology","textShapes":5}
+{"kind":"textbox","id":"sh/36xgrqp8","slide":29,"text":"Coimbatore Institute of Technology","textPreview":"Coimbatore Institute of Technology","textChars":34,"textLines":1,"bbox":[64,676,1040,24]}
+{"kind":"textbox","id":"sh/o76xkvqt","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1160,676,55,24]}
+{"kind":"textbox","id":"sh/p8fytg7e","slide":29,"text":"Thank you","textPreview":"Thank you","textChars":9,"textLines":1,"bbox":[64,245,1120,105]}
+{"kind":"textbox","id":"sh/q98fml8z","slide":29,"text":"Questions & discussion","textPreview":"Questions & discussion","textChars":22,"textLines":1,"bbox":[68,380,1120,53]}
+{"kind":"textbox","id":"sh/bahgvqpk","slide":29,"text":"Mrithyunjayan M","textPreview":"Mrithyunjayan M","textChars":15,"textLines":1,"bbox":[68,520,1120,42]}
+{"kind":"notes","id":"nt/ttxfcn","slide":29,"text":"Source: 2403717610421033 - Mrithyunjayan M.pptx, slide 18. "}

@@ -1,0 +1,354 @@
+[
+  {
+    "slide": 1,
+    "text": [
+      "KEALVI \u2014 LIVE AUDIENCE WORKSPACE",
+      "Name",
+      ":  Mrithyunjayan M ",
+      "Register No",
+      ":  2403717610421033",
+      "Branch",
+      ":  B.E. Computer Science and Engineering",
+      "Date",
+      ":  13/09/2026",
+      "COIMBATORE INSTITUTE OF TECHNOLOGY",
+      "(Government Aided Autonomous Institution Affiliated to Anna University)",
+      "COIMBATORE \u2013 641014",
+      "1"
+    ],
+    "images": [
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-1-0.jpeg"
+    ]
+  },
+  {
+    "slide": 2,
+    "text": [
+      "AGENDA",
+      "01",
+      "Introduction",
+      "02",
+      "Problem Statement",
+      "03",
+      "Objectives",
+      "04",
+      "Technologies and Tools",
+      "05",
+      "System Architecture",
+      "06",
+      "Kealvi Application",
+      "07",
+      "Screenshots",
+      "08",
+      "Deconstructing Apple TV",
+      "09",
+      "Conclusion",
+      "2"
+    ],
+    "images": []
+  },
+  {
+    "slide": 3,
+    "text": [
+      "INTRODUCTION",
+      "Modern web applications combine responsive interfaces, backend services, databases and AI-enabled workflows.",
+      "Kealvi is a live audience workspace designed for creating polls, collecting votes and viewing results in real time.",
+      "The application brings poll creation, saved and shared polls, leaderboard, insights and activity alerts into one workspace.",
+      "The project demonstrates full-stack development with a responsive interface for desktop and mobile users.",
+      "Core idea",
+      "Create \u2192 Vote \u2192 Observe live results \u2192 Decide",
+      "Audience focus",
+      "Teams, classrooms, communities and live sessions",
+      "Design goal",
+      "Fast interaction with clear feedback on every action",
+      "3"
+    ],
+    "images": []
+  },
+  {
+    "slide": 4,
+    "text": [
+      "PROBLEM STATEMENT",
+      "Many audience-engagement workflows are fragmented across forms, chat messages and separate analytics tools. This makes it harder to run a quick poll, track participation and interpret the result immediately.",
+      "Fragmented interaction",
+      "Poll creation, voting and result review may happen in different tools, increasing friction for both organizers and participants.",
+      "Limited live visibility",
+      "Without a shared live view, teams cannot quickly see response distribution, active polls or participation signals.",
+      "Weak decision support",
+      "Raw responses alone do not show trends, engagement level, activity history or contributor rankings in a compact way.",
+      "Need: a single responsive workspace that supports poll creation, live voting, organization, analytics and activity tracking.",
+      "4"
+    ],
+    "images": []
+  },
+  {
+    "slide": 5,
+    "text": [
+      "OBJECTIVES",
+      "Create and manage polls",
+      "Compose questions, add options, choose category and set closing time.",
+      "Support live voting",
+      "Allow participants to vote and see result distribution update clearly.",
+      "Organize poll history",
+      "Provide All polls, My polls, Voted and Saved views with search and filters.",
+      "Provide decision insights",
+      "Show leaderboard, engagement indicators, response distribution and activity feed.",
+      "Improve accessibility",
+      "Deliver a responsive desktop and mobile interface with consistent navigation.",
+      "Assist poll drafting",
+      "Use Gemini-assisted topic generation to speed up poll creation.",
+      "5"
+    ],
+    "images": []
+  },
+  {
+    "slide": 6,
+    "text": [
+      "TECHNOLOGIES AND TOOLS",
+      "Component",
+      "Purpose",
+      "Next.js / React",
+      "Frontend development and component-based UI",
+      "Tailwind CSS",
+      "Responsive styling and rapid UI development",
+      "Supabase / PostgreSQL",
+      "Database, persistence and application data",
+      "Google Gemini",
+      "AI-assisted poll topic generation and intelligent drafting",
+      "Vercel",
+      "Application deployment and hosting",
+      "GitHub",
+      "Version control and source-code collaboration",
+      "6"
+    ],
+    "images": []
+  },
+  {
+    "slide": 7,
+    "text": [
+      "SYSTEM ARCHITECTURE",
+      "USERS",
+      "Audience / Organizers",
+      "PRESENTATION LAYER",
+      "Next.js \u2022 React \u2022 Tailwind CSS",
+      "Responsive pages",
+      "Navigation & forms",
+      "Poll cards & dashboards",
+      "APPLICATION LOGIC",
+      "Routes \u2022 Validation \u2022 Data flow",
+      "Create / vote / save",
+      "Search & filters",
+      "Result processing",
+      "DATABASE LAYER",
+      "Supabase \u2022 PostgreSQL",
+      "Polls & options",
+      "Votes & users",
+      "Analytics & activity",
+      "AI LAYER \u2014 GOOGLE GEMINI",
+      "Generates draft poll topics and assists the poll creation workflow.",
+      "EXTERNAL TOOLS",
+      "GitHub  \u2022  Vercel  \u2022  DNS",
+      "7"
+    ],
+    "images": []
+  },
+  {
+    "slide": 8,
+    "text": [
+      "KEALVI APPLICATION",
+      "Overview Dashboard",
+      "Live workspace summary with active polls, responses, participants and activity.",
+      "Polling System",
+      "Create polls using templates, categories, closing time and multiple answer options.",
+      "Live Voting",
+      "Vote on active polls and view percentage-based results immediately.",
+      "Poll Library",
+      "All polls, My polls, Voted and Saved views with search, sorting and status filters.",
+      "Leaderboard",
+      "Ranks contributors based on poll creation and named voting activity.",
+      "Insights",
+      "Summarizes votes per poll, open rate, top categories and participation distribution.",
+      "Activity & Alerts",
+      "Shows recent poll launches and voting actions with time indicators.",
+      "Responsive UI",
+      "Desktop and mobile layouts keep navigation and key actions accessible.",
+      "8"
+    ],
+    "images": []
+  },
+  {
+    "slide": 9,
+    "text": [
+      "SCREENSHOTS \u2014 DASHBOARD & POLL CREATION",
+      "Overview dashboard \u2014 workspace metrics, most active poll and latest signals",
+      "Poll composer \u2014 templates, Gemini draft topic, options, category and voting close",
+      "9"
+    ],
+    "images": [
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-9-0.png",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-9-1.png"
+    ]
+  },
+  {
+    "slide": 10,
+    "text": [
+      "SCREENSHOTS \u2014 LIVE VOTING & POLL LIFECYCLE",
+      "Active poll with vote selection and live percentage results",
+      "Closed poll state with final result distribution",
+      "Search and filter empty-state feedback when no poll matches",
+      "10"
+    ],
+    "images": [
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-10-0.png",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-10-1.png",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-10-2.png"
+    ]
+  },
+  {
+    "slide": 11,
+    "text": [
+      "SCREENSHOTS \u2014 POLL ORGANIZATION",
+      "Saved polls",
+      "Shared poll view",
+      "My polls",
+      "Voted history",
+      "11"
+    ],
+    "images": [
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-11-0.png",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-11-1.png",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-11-2.png",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-11-3.png"
+    ]
+  },
+  {
+    "slide": 12,
+    "text": [
+      "SCREENSHOTS \u2014 LEADERBOARD, INSIGHTS & ACTIVITY",
+      "Community leaderboard",
+      "Decision intelligence and response distribution",
+      "Activity and alerts feed",
+      "12"
+    ],
+    "images": [
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-12-0.png",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-12-1.png",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-12-2.png"
+    ]
+  },
+  {
+    "slide": 13,
+    "text": [
+      "RESPONSIVE DESIGN \u2014 MOBILE",
+      "Mobile overview",
+      "Mobile poll room and composer",
+      "Mobile activity feed",
+      "13"
+    ],
+    "images": [
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-13-0.png",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-13-1.png",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-13-2.png"
+    ]
+  },
+  {
+    "slide": 14,
+    "text": [
+      "DECONSTRUCTING APPLE TV",
+      "Interface patterns observed from the supplied Apple TV analysis",
+      "Home / landing",
+      "Apple TV+",
+      "Store",
+      "Search",
+      "Key UI Features",
+      "Hero banners and featured content",
+      "Play and Add / Watchlist actions",
+      "Continue Watching for quick resumption",
+      "Persistent bottom navigation",
+      "Category-based discovery and search",
+      "Clear active-tab feedback",
+      "The interface emphasizes discovery first, then reduces the number of steps required to resume, save or search content.",
+      "14"
+    ],
+    "images": [
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-14-0.jpeg",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-14-1.jpeg",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-14-2.jpeg",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-14-3.jpeg"
+    ]
+  },
+  {
+    "slide": 15,
+    "text": [
+      "APPLE TV \u2014 LIBRARY, ACCOUNT, STAKEHOLDERS & SERVICES",
+      "Library screen",
+      "Apple account screen",
+      "Stakeholders",
+      "\u2022 Customers streaming movies and TV shows",
+      "\u2022 Movie studios and content providers",
+      "\u2022 Apple TV+ subscription users",
+      "\u2022 Store managers handling purchases and rentals",
+      "\u2022 Recommendation and analytics systems",
+      "\u2022 Advertisers and promotional partners",
+      "\u2022 Support and account management teams",
+      "Core Services",
+      "\u2022 User authentication",
+      "\u2022 Subscription management",
+      "\u2022 Streaming services",
+      "\u2022 Search and discovery",
+      "\u2022 Recommendation engine",
+      "\u2022 Watchlist and library management",
+      "\u2022 Payments and purchases",
+      "\u2022 Notifications",
+      "\u2022 Content delivery network",
+      "\u2022 Analytics and user tracking",
+      "\u2022 Voice search processing",
+      "\u2022 Account and family sharing",
+      "15"
+    ],
+    "images": [
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-15-0.jpeg",
+      "/Users/mrithyunjayanm/Projects/kealvi/kealvi/.presentation-polish/source/image-15-1.jpeg"
+    ]
+  },
+  {
+    "slide": 16,
+    "text": [
+      "DESIGN LEARNINGS APPLIED TO KEALVI",
+      "Strong primary action",
+      "Apple TV foregrounds Play/Add. Kealvi similarly keeps Create poll / New poll visible in the header and composer.",
+      "Persistent navigation",
+      "Apple TV uses stable bottom navigation. Kealvi keeps major destinations consistent across desktop and mobile.",
+      "Saved content model",
+      "Apple TV Library mirrors a familiar pattern for Saved polls and My polls.",
+      "Fast discovery",
+      "Category cards and search inspire Kealvi search, category/status filters and shared-poll views.",
+      "Immediate feedback",
+      "Apple TV uses clear active tabs and state changes; Kealvi uses vote confirmation, closed states and empty states.",
+      "Personal context",
+      "Apple Account centralizes identity/settings; Kealvi uses a display name and contributor-based activity/leaderboard.",
+      "16"
+    ],
+    "images": []
+  },
+  {
+    "slide": 17,
+    "text": [
+      "CONCLUSION",
+      "Kealvi integrates poll creation, live voting, result visualization, organization, analytics and activity tracking in a single responsive workspace.",
+      "The project demonstrates practical full-stack integration using modern frontend tools, Supabase data services and Gemini-assisted drafting.",
+      "Desktop and mobile screenshots show consistent navigation, clear state feedback and reusable card-based UI patterns.",
+      "The Apple TV deconstruction helped identify effective interface patterns such as strong primary actions, persistent navigation, saved-content views and fast discovery.",
+      "Outcome: a clean, data-driven audience engagement application that turns opinions into visible, actionable results.",
+      "17"
+    ],
+    "images": []
+  },
+  {
+    "slide": 18,
+    "text": [
+      "THANK YOU",
+      "Coimbatore Institute of Technology"
+    ],
+    "images": []
+  }
+]
