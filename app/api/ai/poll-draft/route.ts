@@ -45,7 +45,7 @@ export async function POST(request: Request) {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
       return Response.json(
-        { error: "Add GEMINI_API_KEY to enable AI poll drafts" },
+        { error: "Gemini is not configured. Add GEMINI_API_KEY to .env.local and restart the server." },
         { status: 503 }
       );
     }

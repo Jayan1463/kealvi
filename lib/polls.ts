@@ -6,7 +6,6 @@ export type PollOption = {
   votes: number;
   percentage: number;
 };
-//sd
 export type Poll = {
   id: string;
   title: string;
@@ -171,7 +170,6 @@ function normalizePoll(row: PollRow, voterId?: string): Poll {
     }),
   };
 }
-//new func
 function buildWorkspace(rows: PollRow[], voterId?: string): WorkspaceData {
   const polls = rows.map((row) => normalizePoll(row, voterId));
   const people = new Set<string>();
@@ -206,6 +204,19 @@ function buildWorkspace(rows: PollRow[], voterId?: string): WorkspaceData {
   }
 
   const activity: WorkspaceData["activity"] = [];
+  for (const row of rows) {
+    for (const option of row.poll_options ?? []) {
+      for (const vote of option.poll_votes ?? []) {
+        activity.push({
+          id: `vote-${vote.id}`,
+          type: "voted",
+          title: row.title,
+          detail: `${vote.voter_name?.trim() || "Anonymous"} voted in ${row.category}`,
+          at: vote.created_at,
+        });
+      }
+    }
+  }
   for (const poll of polls.slice(0, 6)) {
     activity.push({
       id: `created-${poll.id}`,
@@ -360,12 +371,14 @@ export async function voteOnPoll(input: {
     throw new Error("This poll is closed");
   }
 
-  const { data: existing } = await supabase
+  const { data: existing, error: existingError } = await supabase
     .from("poll_votes")
     .select("id,option_id")
     .eq("poll_id", input.pollId)
     .eq("voter_id", input.voterId)
     .maybeSingle();
+
+  if (existingError) throw new Error(existingError.message);
 
   if (existing && !poll.allow_vote_changes) {
     throw new Error("You already voted in this poll");

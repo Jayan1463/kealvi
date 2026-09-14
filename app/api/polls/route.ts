@@ -34,6 +34,15 @@ export async function POST(request: Request) {
     if (options.length < 2 || options.length > 8) {
       return Response.json({ error: "Add between 2 and 8 unique options" }, { status: 400 });
     }
+    if (new Set(options.map((option) => option.toLowerCase())).size !== options.length || options.some((option) => option.length > 120)) {
+      return Response.json({ error: "Options must be distinct and at most 120 characters" }, { status: 400 });
+    }
+    if (String(body.description ?? "").trim().length > 500) {
+      return Response.json({ error: "Context must be at most 500 characters" }, { status: 400 });
+    }
+    if (body.expiresAt && (!Number.isFinite(Date.parse(String(body.expiresAt))) || Date.parse(String(body.expiresAt)) <= Date.now())) {
+      return Response.json({ error: "Choose a valid future voting deadline" }, { status: 400 });
+    }
 
     const id = await createPoll({
       title,
@@ -48,7 +57,7 @@ export async function POST(request: Request) {
     return Response.json({ id }, { status: 201 });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Could not create poll";
-    const status = /already exists/i.test(message) ? 409 : 500;
+    const status = error instanceof SyntaxError ? 400 : /already exists/i.test(message) ? 409 : 500;
     return Response.json(
       { error: message },
       { status }

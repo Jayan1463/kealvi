@@ -1,0 +1,33 @@
+{
+  "exportedAt": "2026-09-13T14:04:21.880Z",
+  "polls": [
+    {
+      "id": "d6381cee-35af-4027-98d2-a7f4af234a58",
+      "title": "Workspace verification • 2026-09-13T14:04:20.082Z",
+      "description": null,
+      "category": "Culture",
+      "status": "active",
+      "totalVotes": 1,
+      "options": [
+        {
+          "id": "8edf3089-75b2-483b-aa35-56884759dd6e",
+          "label": "Energized",
+          "votes": 0,
+          "percentage": 0
+        },
+        {
+          "id": "83b16707-ee9c-4467-b9bc-a4bd020ba5ac",
+          "label": "Doing well",
+          "votes": 1,
+          "percentage": 100
+        },
+        {
+          "id": "9d53b187-596b-4f8f-be37-958f25c4638e",
+          "label": "Need support",
+          "votes": 0,
+          "percentage": 0
+        }
+      ]
+    }
+  ]
+}

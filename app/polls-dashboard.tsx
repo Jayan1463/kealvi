@@ -11,6 +11,22 @@ const tabs: Array<{ id: Tab; label: string }> = [
   { id: "insights", label: "Insights" },
   { id: "activity", label: "Activity" },
 ];
+const templates = [
+  { label: "Team check-in", title: "How is the team feeling this week?", category: "Culture", options: ["Energized", "Doing well", "Need support"] },
+  { label: "Feature priority", title: "What should we focus on next?", category: "Product", options: ["New features", "Performance", "Ease of use", "Reliability"] },
+  { label: "Session feedback", title: "How helpful was this session?", category: "Learning", options: ["Very helpful", "Somewhat helpful", "Not helpful yet"] },
+];
+
+function downloadResults(polls: Poll[]) {
+  const report = { exportedAt: new Date().toISOString(), polls: polls.map(({ id, title, description, category, status, totalVotes, options }) => ({ id, title, description, category, status, totalVotes, options })) };
+  const url = URL.createObjectURL(new Blob([JSON.stringify(report, null, 2)], { type: "application/json" }));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "kealvi-results.json";
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
 const categories = ["General", "Product", "Engineering", "Culture", "Learning", "Fun"];
 
 function getIdentity() {
@@ -35,29 +51,54 @@ function relativeTime(value: string) {
 export default function PollsDashboard({ initialData }: { initialData: WorkspaceData }) {
   const [data, setData] = useState(initialData);
   const [tab, setTab] = useState<Tab>("overview");
+  const [showComposer, setShowComposer] = useState(true);
   const [name, setName] = useState("");
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState("all");
+  const [collection, setCollection] = useState("all");
+  const [saved, setSaved] = useState<string[]>([]);
+  const [sharedId, setSharedId] = useState<string | null>(null);
   const [sort, setSort] = useState("newest");
   const [notice, setNotice] = useState<string | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
   const voterId = useRef("");
+  const [viewerId, setViewerId] = useState("");
 
   async function refresh() {
     if (!voterId.current) return;
-    const response = await fetch(`/api/polls?voterId=${encodeURIComponent(voterId.current)}`, {
-      cache: "no-store",
-    });
-    if (response.ok) setData(await response.json());
+    try {
+      const response = await fetch(`/api/polls?voterId=${encodeURIComponent(voterId.current)}`, {
+        cache: "no-store",
+      });
+      if (!response.ok) throw new Error("Could not refresh");
+      setData(await response.json());
+    } catch {
+      setNotice("Connection interrupted. Your last loaded results are still shown. Try refreshing shortly.");
+    }
   }
 
   useEffect(() => {
     voterId.current = getIdentity();
     const savedName = localStorage.getItem("kealvi_name") ?? "";
-    const hydrationTimer = window.setTimeout(() => setName(savedName), 0);
+    const readLink = () => {
+      const id = new URLSearchParams(window.location.hash.slice(1)).get("poll");
+      setSharedId(id);
+      if (id) { setTab("polls"); setCollection("all"); setStatus("all"); setQuery(""); }
+    };
+    const hydrationTimer = window.setTimeout(() => {
+      setName(savedName);
+      setViewerId(voterId.current);
+      try {
+        const stored = JSON.parse(localStorage.getItem("kealvi_saved") ?? "[]");
+        if (Array.isArray(stored)) setSaved(stored.filter((id): id is string => typeof id === "string"));
+      } catch { /* Ignore damaged saved preferences. */ }
+      readLink();
+    }, 0);
+    window.addEventListener("hashchange", readLink);
     void refresh();
     const interval = window.setInterval(() => void refresh(), 15000);
     return () => {
+      window.removeEventListener("hashchange", readLink);
       window.clearTimeout(hydrationTimer);
       window.clearInterval(interval);
     };
@@ -71,6 +112,8 @@ export default function PollsDashboard({ initialData }: { initialData: Workspace
   const filteredPolls = useMemo(() => {
     const lowered = query.toLowerCase();
     return data.polls
+      .filter((poll) => !sharedId || poll.id === sharedId)
+      .filter((poll) => collection === "all" || (collection === "saved" ? saved.includes(poll.id) : collection === "mine" ? poll.creatorId === viewerId : Boolean(poll.viewerVoteOptionId)))
       .filter((poll) => status === "all" || poll.status === status)
       .filter(
         (poll) =>
@@ -86,7 +129,7 @@ export default function PollsDashboard({ initialData }: { initialData: Workspace
         }
         return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
       });
-  }, [data.polls, query, status, sort]);
+  }, [data.polls, query, status, sort, collection, saved, sharedId, viewerId]);
 
   async function vote(poll: Poll, optionId: string) {
     if (!data.configured) {
@@ -94,32 +137,38 @@ export default function PollsDashboard({ initialData }: { initialData: Workspace
       return;
     }
     setBusy(poll.id);
-    const response = await fetch(`/api/polls/${poll.id}/vote`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        optionId,
-        voterId: voterId.current,
-        voterName: name,
-      }),
-    });
-    const result = await response.json();
-    setNotice(response.ok ? "Vote recorded. Results are live." : result.error);
-    await refresh();
-    setBusy(null);
+    try {
+      const response = await fetch(`/api/polls/${poll.id}/vote`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          optionId,
+          voterId: voterId.current,
+          voterName: name,
+        }),
+      });
+      const result = await response.json();
+      setNotice(response.ok ? "Vote recorded. Results are live." : result.error);
+      await refresh();
+    } catch {
+      setNotice("Could not reach the server. Please try again.");
+    } finally { setBusy(null); }
   }
 
   async function close(poll: Poll) {
     setBusy(poll.id);
-    const response = await fetch(`/api/polls/${poll.id}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "close", creatorId: voterId.current }),
-    });
-    const result = await response.json();
-    setNotice(response.ok ? "Poll closed." : result.error);
-    await refresh();
-    setBusy(null);
+    try {
+      const response = await fetch(`/api/polls/${poll.id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "close", creatorId: voterId.current }),
+      });
+      const result = await response.json();
+      setNotice(response.ok ? "Poll closed." : result.error);
+      await refresh();
+    } catch {
+      setNotice("Could not reach the server. Please try again.");
+    } finally { setBusy(null); }
   }
 
   return (
@@ -132,6 +181,8 @@ export default function PollsDashboard({ initialData }: { initialData: Workspace
               key={item.id}
               className={`side-button ${tab === item.id ? "active" : ""}`}
               onClick={() => setTab(item.id)}
+              aria-label={item.label}
+              aria-current={tab === item.id ? "page" : undefined}
               title={item.label}
             >
               <span>{item.id === "overview" ? "⌂" : item.id === "polls" ? "▤" : item.id === "leaderboard" ? "◇" : item.id === "insights" ? "⌁" : "◉"}</span>
@@ -152,7 +203,7 @@ export default function PollsDashboard({ initialData }: { initialData: Workspace
               <span>Your display name</span>
               <input value={name} onChange={(event) => saveName(event.target.value)} placeholder="Anonymous" />
             </label>
-            <button className="primary-button" onClick={() => setTab("polls")}>+ Create poll</button>
+            <button className="primary-button" onClick={() => { setTab("polls"); setShowComposer(true); }}>+ Create poll</button>
           </div>
         </header>
 
@@ -170,12 +221,25 @@ export default function PollsDashboard({ initialData }: { initialData: Workspace
             <span>Add `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`, then run `supabase/schema.sql` to enable persistence.</span>
           </div>
         )}
-        {notice && <button className="notice" onClick={() => setNotice(null)}>{notice}<span>×</span></button>}
+        {notice && <button role="status" className="notice" onClick={() => setNotice(null)}>{notice}<span>×</span></button>}
 
-        {tab === "overview" && <Overview data={data} openPolls={() => setTab("polls")} />}
+        {tab === "overview" && <Overview data={data} openPolls={() => { setTab("polls"); setShowComposer(true); }} />}
         {tab === "polls" && (
           <PollsPanel
             data={data}
+            showComposer={showComposer}
+            setShowComposer={setShowComposer}
+            collection={collection}
+            setCollection={setCollection}
+            saved={saved}
+            toggleSaved={(id) => {
+              const next = saved.includes(id) ? saved.filter((item) => item !== id) : [...saved, id];
+              setSaved(next);
+              try { localStorage.setItem("kealvi_saved", JSON.stringify(next)); }
+              catch { setNotice("Saved for this session. Browser storage is unavailable."); }
+            }}
+            sharedId={sharedId}
+            clearShared={() => { setSharedId(null); history.replaceState(null, "", window.location.pathname); }}
             polls={filteredPolls}
             query={query}
             setQuery={setQuery}
@@ -244,6 +308,14 @@ function Metric({ label, value, change }: { label: string; value: number; change
 function PollsPanel(props: {
   data: WorkspaceData;
   polls: Poll[];
+  showComposer: boolean;
+  setShowComposer: (value: boolean) => void;
+  collection: string;
+  setCollection: (value: string) => void;
+  saved: string[];
+  toggleSaved: (id: string) => void;
+  sharedId: string | null;
+  clearShared: () => void;
   query: string;
   setQuery: (value: string) => void;
   status: string;
@@ -258,7 +330,7 @@ function PollsPanel(props: {
   refresh: () => Promise<void>;
   notify: (message: string) => void;
 }) {
-  const [showComposer, setShowComposer] = useState(true);
+  const { showComposer, setShowComposer } = props;
   return (
     <div className="content-stack">
       <div className="section-title">
@@ -266,14 +338,21 @@ function PollsPanel(props: {
         <button className="secondary-button" onClick={() => setShowComposer(!showComposer)}>{showComposer ? "Hide composer" : "+ New poll"}</button>
       </div>
       {showComposer && <PollComposer {...props} />}
+      <div className="library-tools">
+        <div className="collection-tabs" aria-label="Poll collection">
+          {[["all", "All polls"], ["mine", "My polls"], ["voted", "Voted"], ["saved", "Saved"]].map(([id, label]) => <button key={id} className={props.collection === id ? "primary-button" : "secondary-button"} aria-pressed={props.collection === id} onClick={() => props.setCollection(id)}>{label}</button>)}
+        </div>
+        <button className="secondary-button" disabled={!props.polls.length} onClick={() => downloadResults(props.polls)}>Download results</button>
+      </div>
+      {props.sharedId && <div className="setup-banner">Viewing a shared poll <button className="text-button" onClick={props.clearShared}>Show all polls</button></div>}
       <div className="filter-row">
-        <input value={props.query} onChange={(e) => props.setQuery(e.target.value)} placeholder="Search polls, categories, or creators…" />
-        <select value={props.status} onChange={(e) => props.setStatus(e.target.value)}><option value="all">All status</option><option value="active">Active</option><option value="closed">Closed</option></select>
-        <select value={props.sort} onChange={(e) => props.setSort(e.target.value)}><option value="newest">Newest</option><option value="popular">Most votes</option><option value="closing">Closing soon</option></select>
+        <input aria-label="Search polls" value={props.query} onChange={(e) => props.setQuery(e.target.value)} placeholder="Search polls, categories, or creators…" />
+        <select aria-label="Poll status" value={props.status} onChange={(e) => props.setStatus(e.target.value)}><option value="all">All status</option><option value="active">Active</option><option value="closed">Closed</option></select>
+        <select aria-label="Sort polls" value={props.sort} onChange={(e) => props.setSort(e.target.value)}><option value="newest">Newest</option><option value="popular">Most votes</option><option value="closing">Closing soon</option></select>
       </div>
       <div className="poll-grid">
         {props.polls.map((poll) => (
-          <PollCard key={poll.id} poll={poll} busy={props.busy === poll.id} vote={(optionId) => props.vote(poll, optionId)} close={() => props.close(poll)} canClose={poll.creatorId === props.voterId.current} />
+          <PollCard key={poll.id} poll={poll} busy={props.busy === poll.id} vote={(optionId) => props.vote(poll, optionId)} close={() => props.close(poll)} canClose={poll.creatorId === props.voterId.current} saved={props.saved.includes(poll.id)} toggleSaved={() => props.toggleSaved(poll.id)} notify={props.notify} />
         ))}
       </div>
       {!props.polls.length && <EmptyState />}
@@ -300,44 +379,52 @@ function PollComposer(props: {
 
   async function submit() {
     setSubmitting(true);
-    const expiresAt = duration === "none" ? null : new Date(Date.now() + Number(duration) * 3600000).toISOString();
-    const response = await fetch("/api/polls", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ title, description, category, options, allowVoteChanges: allowChanges, expiresAt, creatorName: props.name, creatorId: props.voterId.current }),
-    });
-    const result = await response.json();
-    props.notify(response.ok ? "Poll published and ready for votes." : result.error);
-    if (response.ok) {
-      setTitle(""); setDescription(""); setOptions(["", ""]);
-      await props.refresh();
-    }
-    setSubmitting(false);
+    try {
+      const expiresAt = duration === "none" ? null : new Date(Date.now() + Number(duration) * 3600000).toISOString();
+      const response = await fetch("/api/polls", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title, description, category, options, allowVoteChanges: allowChanges, expiresAt, creatorName: props.name, creatorId: props.voterId.current }),
+      });
+      const result = await response.json();
+      props.notify(response.ok ? "Poll published and ready for votes." : result.error);
+      if (response.ok) {
+        setTitle(""); setDescription(""); setOptions(["", ""]);
+        await props.refresh();
+      }
+    } catch { props.notify("Could not publish. Check your connection and try again."); }
+    finally { setSubmitting(false); }
   }
 
   async function generateDraft() {
     setAiLoading(true);
-    const response = await fetch("/api/ai/poll-draft", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ topic: aiTopic, category }),
-    });
-    const result = await response.json();
-    if (response.ok) {
-      setTitle(result.draft.title);
-      setDescription(result.draft.description);
-      setCategory(result.draft.category);
-      setOptions(result.draft.options);
-      props.notify("AI draft added to the composer.");
-    } else {
-      props.notify(result.error ?? "Could not generate an AI draft.");
+    try {
+        const response = await fetch("/api/ai/poll-draft", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ topic: aiTopic, category }),
+        });
+        const result = await response.json();
+        if (response.ok && result.draft) {
+          setTitle(result.draft.title);
+          setDescription(result.draft.description);
+          setCategory(result.draft.category);
+          setOptions(result.draft.options);
+          props.notify("AI draft added to the composer.");
+        } else {
+          props.notify(result.error ?? "Could not generate an AI draft.");
+        }
+    } catch {
+      props.notify("Could not reach the AI draft service. Check the server and Gemini setup.");
+    } finally {
+      setAiLoading(false);
     }
-    setAiLoading(false);
   }
 
   return (
     <section className="composer panel">
       <div className="composer-head"><div><span className="composer-icon">+</span><div><h3>Start a new poll</h3><p>Ask one clear question and offer distinct choices.</p></div></div><span className="tag">{props.data.configured ? "Database ready" : "Setup required"}</span></div>
+      <div className="template-row"><span>Start from a template</span>{templates.map((template) => <button key={template.label} className="secondary-button" onClick={() => { setTitle(template.title); setCategory(template.category); setOptions([...template.options]); }}>{template.label}</button>)}</div>
       <div className="ai-draft">
         <label><span>AI draft topic</span><input value={aiTopic} onChange={(e) => setAiTopic(e.target.value)} placeholder="Example: next workshop topic for students" maxLength={180} /></label>
         <button className="secondary-button" disabled={aiLoading || aiTopic.trim().length < 3} onClick={generateDraft}>{aiLoading ? "Drafting..." : "Generate with Gemini"}</button>
@@ -349,16 +436,16 @@ function PollComposer(props: {
         <label><span>Voting closes</span><select value={duration} onChange={(e) => setDuration(e.target.value)}><option value="1">In 1 hour</option><option value="24">In 24 hours</option><option value="72">In 3 days</option><option value="168">In 1 week</option><option value="none">No deadline</option></select></label>
         <div className="wide option-editor">
           <span>Answer options</span>
-          {options.map((option, index) => <div className="option-input" key={index}><b>{String.fromCharCode(65 + index)}</b><input value={option} onChange={(e) => setOptions((current) => current.map((item, i) => i === index ? e.target.value : item))} placeholder={`Option ${index + 1}`} /><button onClick={() => options.length > 2 && setOptions((current) => current.filter((_, i) => i !== index))} disabled={options.length <= 2}>×</button></div>)}
+          {options.map((option, index) => <div className="option-input" key={index}><b>{String.fromCharCode(65 + index)}</b><input value={option} onChange={(e) => setOptions((current) => current.map((item, i) => i === index ? e.target.value : item))} aria-label={`Option ${index + 1}`} maxLength={120} placeholder={`Option ${index + 1}`} /><button aria-label={`Remove option ${index + 1}`} onClick={() => options.length > 2 && setOptions((current) => current.filter((_, i) => i !== index))} disabled={options.length <= 2}>×</button></div>)}
           {options.length < 8 && <button className="text-button" onClick={() => setOptions((current) => [...current, ""])}>+ Add another option</button>}
         </div>
       </div>
-      <div className="composer-footer"><label className="check-row"><input type="checkbox" checked={allowChanges} onChange={(e) => setAllowChanges(e.target.checked)} /><span>Allow participants to change their vote</span></label><button className="primary-button" disabled={submitting || !title.trim() || options.filter((item) => item.trim()).length < 2} onClick={submit}>{submitting ? "Publishing…" : "Publish poll"}</button></div>
+      <div className="composer-footer"><label className="check-row"><input type="checkbox" checked={allowChanges} onChange={(e) => setAllowChanges(e.target.checked)} /><span>Allow participants to change their vote</span></label><button className="primary-button" disabled={!props.data.configured || submitting || title.trim().length < 3 || new Set(options.map((item) => item.trim().toLowerCase()).filter(Boolean)).size < 2} onClick={submit}>{submitting ? "Publishing…" : "Publish poll"}</button></div>
     </section>
   );
 }
 
-function PollCard({ poll, busy, vote, close, canClose = false, preview = false }: { poll: Poll; busy: boolean; vote: (optionId: string) => void; close: () => void; canClose?: boolean; preview?: boolean }) {
+function PollCard({ poll, busy, vote, close, canClose = false, preview = false, saved = false, toggleSaved, notify }: { poll: Poll; busy: boolean; vote: (optionId: string) => void; close: () => void; canClose?: boolean; preview?: boolean; saved?: boolean; toggleSaved?: () => void; notify?: (message: string) => void }) {
   const closed = poll.status === "closed";
   return (
     <article className={`poll-card ${closed ? "closed" : ""} ${preview ? "preview-card" : ""}`}>
@@ -369,7 +456,7 @@ function PollCard({ poll, busy, vote, close, canClose = false, preview = false }
         {poll.options.map((option) => {
           const selected = poll.viewerVoteOptionId === option.id;
           return (
-            <button key={option.id} disabled={closed || busy || preview} className={`result-option ${selected ? "selected" : ""}`} onClick={() => vote(option.id)}>
+            <button key={option.id} disabled={closed || busy || preview || Boolean(poll.viewerVoteOptionId && !poll.allowVoteChanges)} className={`result-option ${selected ? "selected" : ""}`} onClick={() => vote(option.id)}>
               <span className="result-fill" style={{ width: `${option.percentage}%` }} />
               <span className="option-copy"><i>{selected ? "✓" : ""}</i><b>{option.label}</b></span>
               <span className="option-score"><b>{option.percentage}%</b><small>{option.votes} votes</small></span>
@@ -377,7 +464,17 @@ function PollCard({ poll, busy, vote, close, canClose = false, preview = false }
           );
         })}
       </div>
-      <footer><span>By {poll.creatorName} · {poll.totalVotes} total votes</span>{canClose && !closed && <button className="text-button danger" onClick={close}>Close poll</button>}</footer>
+      {!preview && <div className="poll-actions">
+        <button className="text-button" aria-pressed={saved} onClick={toggleSaved}>{saved ? "★ Saved" : "☆ Save"}</button>
+        <button className="text-button" onClick={async () => {
+          const url = new URL(window.location.href);
+          url.hash = new URLSearchParams({ poll: poll.id }).toString();
+          try { await navigator.clipboard.writeText(url.href); notify?.("Poll link copied."); }
+          catch { notify?.(`Share this link: ${url.href}`); }
+        }}>Copy link</button>
+        <button className="text-button" onClick={() => downloadResults([poll])}>Download results</button>
+      </div>}
+      <footer><span>By {poll.creatorName} · {poll.totalVotes} total votes</span>{canClose && !closed && <button className="text-button danger" disabled={busy} onClick={close}>Close poll</button>}</footer>
     </article>
   );
 }
